@@ -12,11 +12,15 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true
         },
-        creator_name: {
+        content:{
             type: DataTypes.TEXT,
+            allowNull: false
+        },
+        creator_id: {
+            type: DataTypes.INTEGER,
             references: {
                 model: 'user',
-                key: 'username'
+                key: 'id'
             }
         }
     },

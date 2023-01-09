@@ -17,14 +17,14 @@ Post.init(
             allowNull: false
         },
         content: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false
         },
-        creator_name: {
-            type: DataTypes.STRING,
+        creator_id: {
+            type: DataTypes.INTEGER,
             references: {
                 model: 'user',
-                key: 'username'
+                key: 'id'
             }
         }
     },

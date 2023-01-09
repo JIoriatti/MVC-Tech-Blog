@@ -1,5 +1,4 @@
 const {Model, DataTypes} = require('sequelize');
-const { underscoredIf } = require('sequelize/types/utils');
 
 const sequelize = require('../config/connection');
 
@@ -19,8 +18,6 @@ User.init(
             unique: true,
             validate: {
                 len: [4,16],
-                isNull: false,
-                notEmpty: true
             }
                 
         },
@@ -29,8 +26,6 @@ User.init(
             allowNull: false,
             validate: {
                 len: [8,32],
-                isNull: false,
-                notEmpty: true
             }
         }
     },
@@ -41,4 +36,6 @@ User.init(
         underscored: true,
         modelName: 'user'
     }
-)
+);
+
+module.exports = User;
