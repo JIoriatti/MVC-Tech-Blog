@@ -1,7 +1,8 @@
 <div class="comment-container">
     <div class="comment-header-container">
-        <div class="comment-header">{{this.user.username}}</div>
-        <div class="comment-date">{{this.createdAt}}</div>
+        <div class="comment-header">User: <span>{{this.user.username}}</span></div>
+        <div class="comment-body">{{this.content}}</div>
     </div>
-    <div class="comment-body">{{this.content}}</div>
+    <div class="comment-date">Commented on: {{this.createdAt}}</div>
+    
 </div>
