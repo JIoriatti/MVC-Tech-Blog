@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vw;
+    width: 100vw;
+    background-color: rgb(51, 46, 58);
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.post-container{
+    height: fit-content;
+    width: max-content;
+}
+.post-header-container{
+    font-size: 32px;
+}
+.post-header{
+    height: fit-content;
+    width: auto;
+}
+.post-user{}
+.post-body{}
+.post-footer-contaier{}
+.post-date{}
+
+.comment-container{}
+.comment-header-container{}
+.comment-header{}
+.comment-date{}
+.comment-body{}

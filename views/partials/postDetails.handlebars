@@ -1,0 +1,13 @@
+<div class="post-container">
+    <div class="post-header-container">
+        <div class="post-header">{{title}}</div>
+        <div class="post-user">{{user.username}}</div>
+    </div>
+    <div class="post-body">{{content}}</div>
+    <div class="post-footer-container">
+        <div class="post-date">{{createdAt}}</div>
+    </div>
+    {{#each comments as |comment|}}
+    {{>commentDetails}}
+    {{/each}}
+</div>
