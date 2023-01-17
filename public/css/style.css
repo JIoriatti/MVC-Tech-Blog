@@ -34,6 +34,8 @@ span{
     border: none;
     text-decoration: underline;
 }
+
+
 .main-container{
     display: flex;
     flex-direction: column;
@@ -42,6 +44,7 @@ span{
     width: fit-content;
     border: none;
     background-color: rgb(93, 89, 98);
+    padding: 5em;
 }
 .post-container *{
     background-color: rgb(184, 180, 188);
@@ -50,6 +53,7 @@ span{
     height: fit-content;
     width: max-content;
     font-weight: bold;
+    background-color:rgb(134, 130, 138);
 }
 .post-header{
     font-size: 32px;
@@ -58,6 +62,7 @@ span{
     border: none;
     color: black;
     font-weight: bold;
+    margin-left: 0.25em;
 }
 .post-user{
     width: max-content;
@@ -76,13 +81,24 @@ span{
 
 .comment-container{
     font-weight: bold;
+    background-color: rgb(211, 209, 214);
 }
-.comment-header-container{}
+.comment-header-container{
+    background-color: rgb(211, 209, 214);
+}
 .comment-header{
+    background-color: rgb(211, 209, 214);
     width: max-content;
 }
-.comment-date{}
+.comment-header span{
+    background-color: rgb(211, 209, 214);
+}
+.comment-date{
+    background-color: rgb(211, 209, 214);
+}
+
 .comment-body{
+    background-color: rgb(211, 209, 214);
     width: max-content;
     font-weight: initial;
 }
