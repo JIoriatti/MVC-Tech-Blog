@@ -1,0 +1,19 @@
+<div class="post-container">
+    <div class="post-body-container">
+        <a href="/posts/{{id}}" class="post-anchor">
+            <div class="post-header">{{title}}</div>
+        </a>
+        <div class="post-user">Posted by: 
+            <a href="/users/{{user.id}}">
+                <span>{{user.username}}</span>
+            </a>
+        </div>
+        <div class="post-body">{{content}}</div>
+        <div class="post-date">Posted on: {{createdAt}}</div>
+    </div>
+        
+    
+    {{#each comments as |comment|}}
+    {{>commentDetails}}
+    {{/each}}
+</div>

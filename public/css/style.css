@@ -34,7 +34,10 @@ span{
     border: none;
     text-decoration: underline;
 }
-
+a{
+    box-shadow: none;
+    border: none;
+}
 
 .main-container{
     display: flex;
@@ -51,9 +54,16 @@ span{
 }
 .post-container{
     height: fit-content;
-    width: max-content;
+    width: auto;
     font-weight: bold;
     background-color:rgb(134, 130, 138);
+}
+.post-anchor{
+    text-decoration: none;
+}
+.post-anchor:hover{
+    text-decoration: underline;
+    color: black;
 }
 .post-header{
     font-size: 32px;
@@ -68,6 +78,12 @@ span{
     width: max-content;
     border: none;
     font-size: 16px;
+}
+.post-body-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .post-body{
     height: auto;
