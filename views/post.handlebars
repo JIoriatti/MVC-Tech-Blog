@@ -1,19 +1,24 @@
 <div class="post-container">
     <div class="post-body-container">
-        <a href="/posts/{{id}}" class="post-anchor">
-            <div class="post-header">{{title}}</div>
+        <a href="/posts/{{post.id}}" class="post-anchor">
+            <div class="post-header">{{post.title}}</div>
         </a>
-        <div class="post-user">Posted by: 
-            <a href="/users/{{user.id}}">
-                <span>{{user.username}}</span>
-            </a>
+        <div class="post-user-container">
+            <div class="post-user">Posted by: 
+                <a class="user" href="/users/{{post.user.id}}">
+                    <span class="user">{{post.user.username}}</span>
+                </a>
+            </div>
         </div>
-        <div class="post-body">{{content}}</div>
-        <div class="post-date">Posted on: {{createdAt}}</div>
+        <div class="post-body">{{post.content}}</div>
+        <div class="post-date">Posted on: {{post.createdAt}}</div>
     </div>
         
     
-    {{#each comments as |comment|}}
+    {{#each post.comments as |comment|}}
     {{>commentDetails}}
     {{/each}}
 </div>
+{{#if logged_in}}
+<button class="comment-btn">Comment</button>
+{{/if}}

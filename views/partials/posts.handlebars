@@ -1,13 +1,11 @@
-<div class="post-container">
-    <div class="post-body-container">
-        <a href="/posts/{{id}}" class="post-anchor">
-            <div class="post-header">{{title}}</div>
+<div class="post-body-container post-card">
+    <a href="/posts/{{id}}" class="post-anchor">
+        <div class="post-header">{{title}}</div>
+    </a>
+    <div class="post-user">Posted by: 
+        <a href="/users/{{user.id}}">
+            <span>{{user.username}}</span>
         </a>
-        <div class="post-user">Posted by: 
-            <a href="/users/{{user.id}}">
-                <span>{{user.username}}</span>
-            </a>
-        </div>
     </div>
 </div>
     

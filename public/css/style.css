@@ -1,20 +1,26 @@
+:root{
+    --bg: whitesmoke;
+    --blue: cornflowerblue;
+    --accent1: rgba(217, 241, 213, 0.989);
+    --postBG: rgb(223, 229, 233);
+    --commentBG: rgb(234, 234, 234);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid grey; */
 }
 
 body{
     height: 100vw;
     width: 100vw;
-    background-color: rgb(51, 46, 58);
+    background-color: var(--bg);
     color: black;
 }
 main *{
     margin: 0.5em;
     padding: 0.5em;
-    box-shadow: 1px 2px 3px black;
-    border-radius: 5px;
 }
 main{
     margin: 5em;
@@ -23,22 +29,62 @@ main{
     align-items: center;
 }
 header{
-    text-align: center;
-    margin-top: 100px;
-    font-size: 48px;
-    color: whitesmoke;
+    display: flex;
+    margin-top: 2em;
+    align-items: center;
+    justify-content: flex-end;
 }
 span{
-    color: rgb(35, 71, 102);
+    color: var(--blue);
     box-shadow: none;
     border: none;
     text-decoration: underline;
+    background-color: transparent;
 }
 a{
     box-shadow: none;
     border: none;
+    background-color: transparent;
 }
-
+nav{
+    display: inline-flex;
+    flex-direction: row;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    margin: 2em;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 24px;
+}
+.user{
+    margin: 0;
+    padding: 0;
+}
+.header-content-container{
+    display: flex;
+    min-width: 50%;
+    margin-right: 7em;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    font-size: 32px;
+    color: var(--blue);
+    text-align: center;
+}
+.title a{
+    text-decoration: none;
+    color: var(--blue);
+}
 .main-container{
     display: flex;
     flex-direction: column;
@@ -46,75 +92,157 @@ a{
     justify-content: center;
     width: fit-content;
     border: none;
-    background-color: rgb(93, 89, 98);
+    background-color: var(--bg);
     padding: 5em;
+    border: solid 1px lightgray;
+}
+
+/* posts' styles */
+.posts{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.post-card{
+    border: 1px solid lightgrey;
+}
+.post-header-title{
+    color: var(--blue);
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
 }
 .post-container *{
-    background-color: rgb(184, 180, 188);
+    background-color: var(--postBG);
 }
 .post-container{
     height: fit-content;
     width: auto;
     font-weight: bold;
-    background-color:rgb(134, 130, 138);
+    background-color:var(--bg);
 }
 .post-anchor{
     text-decoration: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
 }
 .post-anchor:hover{
     text-decoration: underline;
-    color: black;
+    color: var(--blue);
 }
 .post-header{
     font-size: 32px;
     width: max-content;
     height: fit-content;
     border: none;
-    color: black;
+    color: var(--blue);
     font-weight: bold;
-    margin-left: 0.25em;
+    margin: 0;
+    background-color: transparent;
+}
+.post-user-container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    background-color: var(--postBG);
 }
 .post-user{
     width: max-content;
     border: none;
     font-size: 16px;
+    background-color: var(--postBG);
 }
 .post-body-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    background-color: var(--postBG);
 }
 .post-body{
     height: auto;
     width: 800px;
     word-wrap: break-word;
     font-weight: initial;
+    background-color: var(--postBG);
 }
 .post-date{
-    color: black;
+    color: var(--blue);
+    background-color: var(--postBG);
 }
 
+/* comment styles */
 .comment-container{
     font-weight: bold;
-    background-color: rgb(211, 209, 214);
+    background-color: var(--commentBG);
 }
 .comment-header-container{
-    background-color: rgb(211, 209, 214);
+    background-color: var(--commentBG);
 }
 .comment-header{
-    background-color: rgb(211, 209, 214);
+    background-color: var(--commentBG);
     width: max-content;
 }
 .comment-header span{
-    background-color: rgb(211, 209, 214);
+    background-color: var(--commentBG);
 }
 .comment-date{
-    background-color: rgb(211, 209, 214);
+    background-color: var(--commentBG);
 }
 
 .comment-body{
-    background-color: rgb(211, 209, 214);
+    background-color: var(--commentBG);
     width: max-content;
     font-weight: initial;
+}
+
+/* user styles */
+.username{
+    font-size: 48px;
+    color: var(--blue);
+    text-align: center;
+}
+.user-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+.comments-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.posts-header, .comments-header{
+    margin: 1em;
+    font-size: 24px;
+}
+.posts-header{
+    text-align: center;
+}
+.each-comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.each-comment-date{
+
+}
+.fit-content{
+    width: fit-content;
+}
+
+
+.full{
+    display: flex;
+    width: 100%;
+}
+.login-header{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
 }

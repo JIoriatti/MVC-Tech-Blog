@@ -1,7 +1,11 @@
 <div class="comment-container">
     Comment:
     <div class="comment-header-container">
-        <div class="comment-header">User: <span>{{this.user.username}}</span></div>
+        <div class="comment-header">User: 
+            <a class="user" href="/users/{{this.user.id}}">
+                <span class="user">{{this.user.username}}</span>
+            </a>
+        </div>
         <div class="comment-body">{{this.content}}</div>
     </div>
     <div class="comment-date">Commented on: {{this.createdAt}}</div>
