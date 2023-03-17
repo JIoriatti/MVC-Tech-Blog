@@ -2,6 +2,10 @@
 
 A tech-blog website that allows users to create posts about web-development topics as well as comment on other users' posts.
 
+# Database Seeding
+
+Run 'npm run seed' to seed the database with some user data.
+
 # Screenshot
 
 ![Screenshot](./images/mvc-tech-blog-ss.PNG)
